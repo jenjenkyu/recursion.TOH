@@ -1,0 +1,25 @@
+
+package towerofhanoi;
+
+public class TowerOfHanoi {
+
+   public static class tower {
+        void move(char l, char h){
+            System.out.println("the disc " + l +"->"+ h);
+        }
+        public void recur(int count,char a,char b,char c){
+            if (count == 0){
+            }else{
+                recur(count - 1,a,c,b);
+                move(a,c);
+                recur(count - 1,b,a,c);
+        }
+    }  
+}
+    
+    public static void main(String[] args) {
+        tower t = new tower();
+        t.recur(3,'A','B','C');
+    }
+    
+}
